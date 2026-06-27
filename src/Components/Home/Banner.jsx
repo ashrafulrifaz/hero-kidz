@@ -4,7 +4,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='px-20 flex items-center justify-between gap-10 min-h-[80vh]'>
+        <div className='flex items-center justify-between gap-10 min-h-[80vh]'>
             <div className='space-y-5'>
                 <h2 className={`${banglaFont.className} text-6xl font-bold leading-snug`}>আপনার সন্তানকে দিন একটি <span className='text-primary'>সুন্দর ভবিষ্যৎ</span></h2>
                 <h3 className='text-lg font-medium'>Buy every toy with up to 15% discount</h3>

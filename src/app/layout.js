@@ -1,17 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/layouts/Navbar";
 import Footer from "@/Components/layouts/Footer";
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const poppins = Poppins({
+  weight: ['200', '300', '400', '500', '600', '700']
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const banglaFont = localFont({
+  src: './../fonts/mayaboti-normal.ttf'
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${poppins.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

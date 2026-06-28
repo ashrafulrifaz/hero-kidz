@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FiHeart, FiShoppingBag } from "react-icons/fi";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import Link from "next/link";
 
 const ProductCard = ({ product }) => {
   const {
@@ -78,9 +79,9 @@ const ProductCard = ({ product }) => {
           <button className="flex-1 bg-[#D85A30] hover:bg-[#c24f28] text-white text-sm font-medium py-2 rounded-lg transition-colors">
             Add to cart
           </button>
-          <button className="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-lg text-gray-500 hover:text-red-500 hover:border-red-200 transition-colors">
-            <FiHeart size={16} />
-          </button>
+          <Link href={`/products/${product._id}`} className="flex-1 flex items-center justify-center border border-gray-200 rounded-lg text-gray-500 hover:text-[#D85A30] hover:border-[#D85A30] text-sm font-medium py-2 transition-colors">
+            View details
+          </Link>
         </div>
       </div>
     </div>
